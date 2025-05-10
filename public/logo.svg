@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 500 500">
+  <g stroke="#ffb400" fill="none" stroke-width="5">
+    <!-- Big A -->
+    <path d="M200 350 Q250 100, 300 350" stroke-linecap="round" />
+    <path d="M215 300 Q250 250, 285 300" stroke-linecap="round" />
+
+    <!-- Circle around it-->
+    <path d="M250 200 Q350 180 350 300 Q350 420 250 400" />
+    <path d="M250 200 Q150 220 150 300 Q150 380 250 400" />
+  </g>
+  <text x="250" y="450" fill="#ffb400" font-family="Arial, sans-serif" font-size="36" text-anchor="middle" letter-spacing="3">
+    ABHI
+  </text>
+</svg>
