@@ -18,12 +18,12 @@ const ParticlesBackground = () => {
 
     // Configuration: more particles and larger connection distance for richer network
     const vw = window.innerWidth;
-    config = vw > 1600 ? { nb: 800, dist: 120 }
-           : vw > 1300 ? { nb: 700, dist: 100 }
-           : vw > 1100 ? { nb: 600, dist:  90 }
-           : vw >  800 ? { nb: 400, dist:  80 }
-           : vw >  600 ? { nb: 300, dist:  70 }
-           :               { nb: 200, dist:  60 };
+    config = vw > 1600 ? { nb: 1600, dist: 120 }
+           : vw > 1300 ? { nb: 1200, dist: 100 }
+           : vw > 1100 ? { nb: 1100, dist:  90 }
+           : vw >  800 ? { nb: 800, dist:  80 }
+           : vw >  600 ? { nb: 600, dist:  70 }
+           :               { nb: 400, dist:  60 };
     config.array = [];
 
     const colors = [

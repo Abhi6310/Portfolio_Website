@@ -1,5 +1,3 @@
-// src/components/AboutSection.jsx
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
