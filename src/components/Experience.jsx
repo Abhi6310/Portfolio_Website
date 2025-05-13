@@ -9,7 +9,7 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="min-h-screen text-white py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 100, y: 0 }} transition={{ duration: 0.5 }}>
           <h2 className="text-4xl font-bold text-center mb-8">Work Experience</h2>
         </motion.div>
 

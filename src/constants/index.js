@@ -1,26 +1,22 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
   javascript,
-  typescript,
+  c,
   html,
   css,
+  cpp,
   reactjs,
-  redux,
-  tailwind,
+  sql,
+  postman,
   nodejs,
-  mongodb,
+  postgresql,
   git,
-  figma,
   docker,
   walmart,
   amazon,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
+  IMDB,
+  python,
+  portfoliopic,
+  audionyxpic,
 } from "../assets";
 
 export const navLinks = [
@@ -38,26 +34,31 @@ export const navLinks = [
   },
 ];
 
-const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
-  },
-];
-
 const technologies = [
+  {
+    name: "C",
+    icon: c,
+  },
+  {
+    name: "C++",
+    icon: cpp,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "PostgreSQL",
+    icon: postgresql,
+  },
+  {
+    name: "SQL",
+    icon: sql,
+  },
   {
     name: "HTML 5",
     icon: html,
@@ -67,49 +68,26 @@ const technologies = [
     icon: css,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Postman",
+    icon: postman,
   },
   {
     name: "Node JS",
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
     name: "git",
     icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
   },
   {
     name: "docker",
     icon: docker,
   },
+  
 ];
 
 const experiences = [
@@ -141,97 +119,90 @@ const experiences = [
 ];
 
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
 const projects = [
   {
-    name: "Car Rent",
+    name: "Audionyx",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "An immersive 3D audio visualizer that dynamically generates real-time visualizations by processing audio from user-selected media links, or locally uploaded files.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "ThreeJS",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "NodeJS",
         color: "pink-text-gradient",
       },
+      {
+        name: "Docker",
+        color: "black-text-gradient",
+      },
+      {
+        name: "WebAudio API",
+        color: "orange-text-gradient",
+      }
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: audionyxpic,
+    source_code_link: "https://github.com/Alyssa-Webb/Audionyx",
   },
   {
-    name: "Job IT",
+    name: "IMDB Movie Database",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A C++ movie database utilizing hash tables and skip lists for efficient storage, search, and management of movie data, with a user-friendly interface for seamless interaction.",
     tags: [
       {
-        name: "react",
+        name: "C++",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Hash Tables",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Skip Lists",
         color: "pink-text-gradient",
       },
+      {
+        name: "CSV",
+        color: "black-text-gradient",
+      },
+      {
+        name: "Text-Based UI",
+        color: "orange-text-gradient",
+      }
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: IMDB,
+    source_code_link: "https://github.com/Abhi6310/IMDB-Movie-Database",
   },
   {
-    name: "Trip Guide",
+    name: "Personal Portfolio Website",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A clean, responsive portfolio website showcasing projects, skills, and experience with fast performance and modern design.",
     tags: [
       {
-        name: "nextjs",
+        name: "ReactJS",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "TailwindCSS",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Vite",
         color: "pink-text-gradient",
       },
+      {
+        name: "EmailJS",
+        color: "black-text-gradient",
+      }
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: portfoliopic,
+    source_code_link: "https://abhinavchalise.com/",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {technologies,experiences,projects};

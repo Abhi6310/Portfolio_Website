@@ -4,7 +4,7 @@
     <path d="M200 350 Q250 100, 300 350" stroke-linecap="round" />
     <path d="M215 300 Q250 250, 285 300" stroke-linecap="round" />
 
-    <!-- Circle around da bih-->
+    <!-- Circle around-->
     <path d="M250 200 Q350 180 350 300 Q350 420 250 400" />
     <path d="M250 200 Q150 220 150 300 Q150 380 250 400" />
   </g>
