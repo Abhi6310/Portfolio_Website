@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import github from "./github.png";
 import menu from "./menu.svg";
 
@@ -24,7 +23,6 @@ import IMDB from "./IMDB.png";
 import portfoliopic from "./portfolio.png";
 
 export {
-  logo,
   github,
   menu,
   css,
