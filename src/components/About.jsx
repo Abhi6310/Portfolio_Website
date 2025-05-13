@@ -1,9 +1,14 @@
+// src/components/AboutSection.jsx
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-center p-6 text-white">
+    <section
+      id="about"
+      className="flex flex-col items-center justify-center min-h-screen text-center p-6 text-white"
+    >
       <motion.h2
         className="text-3xl md:text-5xl font-bold mb-4"
         initial={{ opacity: 0, y: -50 }}
@@ -34,7 +39,7 @@ const AboutSection = () => {
         <span className="px-3 py-1 bg-indigo-800 text-white rounded-full">VS Code</span>
         <span className="px-3 py-1 bg-indigo-800 text-white rounded-full">MongoDB</span>
       </div>
-    </div>
+    </section>
   );
 };
 
