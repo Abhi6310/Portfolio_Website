@@ -8,7 +8,6 @@ const ParticlesBackground = () => {
     const ctx    = canvas.getContext('2d');
     let   config, animationId;
 
-    // Resize handler: cover full scrollable height
     const resize = () => {
       canvas.width  = window.innerWidth;
       canvas.height = document.documentElement.scrollHeight;
@@ -16,7 +15,6 @@ const ParticlesBackground = () => {
     window.addEventListener('resize', resize);
     resize();
 
-    // Configuration: more particles and larger connection distance for richer network
     const vw = window.innerWidth;
     config = vw > 1600 ? { nb: 1600, dist: 120 }
            : vw > 1300 ? { nb: 1200, dist: 100 }
@@ -34,7 +32,7 @@ const ParticlesBackground = () => {
       'rgba(255,77,90,'
     ];
 
-    // Particle class
+    //Particle class
     function Particle() {
       this.x      = Math.random() * canvas.width;
       this.y      = Math.random() * canvas.height;
@@ -71,7 +69,7 @@ const ParticlesBackground = () => {
       }
     };
 
-    // Mouse tracking for first particle
+    //Mouse tracking for first particle
     const onMouseMove = e => {
       if (config.array[0]) {
         config.array[0].x = e.pageX;
@@ -80,14 +78,14 @@ const ParticlesBackground = () => {
     };
     window.addEventListener('mousemove', onMouseMove);
 
-    // Initialize particles
+    //Initialize particles
     for (let i = 0; i < config.nb; i++) {
       config.array[i] = new Particle();
     }
     config.array[0].radius = 1.5;
     config.array[0].color  = 'rgba(81,162,233,1)';
 
-    // Animation loop
+    //Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       config.array.forEach(p => {
@@ -99,7 +97,7 @@ const ParticlesBackground = () => {
     };
     animate();
 
-    // Cleanup
+    //Cleanup
     return () => {
       cancelAnimationFrame(animationId);
       window.removeEventListener('resize', resize);

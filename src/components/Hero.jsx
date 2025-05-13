@@ -32,7 +32,7 @@ const HeroSection = () => {
           <Linkedin className="mr-2" /> LinkedIn
         </a>
 
-        <a href="https://abhi6310.github.io/abhinavchalise.github.io" target="_blank" className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-500">
+        <a href="https://github.com/Abhi6310/My-Resume/blob/main/AbhinavChaliseResume.pdf" target="_blank" className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-500">
           View Resume
         </a>
       </div>
