@@ -6,7 +6,7 @@ A modern, responsive personal portfolio built with React, Vite, and TailwindCSS 
 
 ## 🚀 Live Demo
 
-🔗 Live: [Your GitHub Pages URL](https://Abhi6310.github.io/portfolio-website)
+🔗 Live: [Deployed on Custom Domain](https://abhinavchalise.com/)
 
 ---
 
