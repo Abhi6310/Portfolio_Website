@@ -1,22 +1,27 @@
-import React, { useState } from 'react';
+// src/components/ContactSection.jsx
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import { SectionWrapper } from '../hoc';
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
+  const formRef   = useRef();
+  const [sent, setSent] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Open mail client with form data
-    const mailtoLink = `mailto:${form.email}?subject=Contact from ${encodeURIComponent(form.name)}&body=${encodeURIComponent(form.message)}`;
-    window.location.href = mailtoLink;
-    setSubmitted(true);
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_USER_ID
+      )
+      .then(
+        () => setSent(true),
+        (err) => alert('Oops, something went wrong: ' + err.text)
+      );
   };
 
   return (
@@ -32,34 +37,26 @@ const Contact = () => {
       </motion.div>
 
       <div className="max-w-xl mx-auto">
-        {submitted ? (
-          <div className="text-center">
-            <p className="text-white text-lg mb-4">Thanks for reaching out! I'll get back to you soon.</p>
-          </div>
+        {sent ? (
+          <p className="text-white text-center">Thanks! I’ll be in touch soon.</p>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-4">
             <input
               type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
+              name="from_name"
               placeholder="Your Name"
               required
               className="w-full px-4 py-2 bg-gray-800 text-white rounded focus:outline-none"
             />
             <input
               type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
+              name="from_email"
               placeholder="Your Email"
               required
               className="w-full px-4 py-2 bg-gray-800 text-white rounded focus:outline-none"
             />
             <textarea
               name="message"
-              value={form.message}
-              onChange={handleChange}
               placeholder="Your Message"
               required
               rows={5}
